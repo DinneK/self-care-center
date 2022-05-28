@@ -32,7 +32,7 @@ h2 {
 }
 form {
   background-color: #ffffff;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   padding-top: 20px;
   padding-bottom: 0px;
   border-radius: 10px;
@@ -69,10 +69,15 @@ button.message {
 }
 .sound-box {
   background-color: #ffffff;
-  background-image: url(happy.svg);
   border-radius: 10px;
   color: black;
-  margin-top: 35px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 800px;
   height: 125px
+}
+.meditating-human {
+  height: 75px;
 }
