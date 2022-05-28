@@ -1,18 +1,15 @@
- var radioButtons = document.querySelector(".radio");
-// var messageButton = document.querySelectorAll(".message");
+ var affirmationButton = document.querySelector('.affirmation');
+ console.log(affirmationButton)
+ var mantraButton = document.querySelector('.mantra')
+ var messageButton = document.querySelector('#receive-message-button');
+ var soundBox = document.querySelector('.sound-box')
 
-
-
-
-
-
-
-
+messageButton.addEventListener('click', clickOnMessageButton);
 
 
 var affirmations = [
   "I forgive myself and set myself free.",
-  "I believe I can be all that I want to be."
+  "I believe I can be all that I want to be.",
   "I am in the process of becoming the best version of myself.",
   "I have the freedom & power to create the life I desire.",
   "I choose to be kind to myself and love myself unconditionally.",
@@ -43,3 +40,26 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ];
+
+function clickOnMessageButton(event) {
+  event.preventDefault();
+  if(affirmationButton.checked) {
+    soundBox.innerText = `${changeAffirmation()}`;
+  } else if(mantraButton.checked) {
+    soundBox.innerText = `${changeMantra()}`;
+  } else {
+    alert('Please Pick an Affirmation or Mantra');
+  }
+};
+
+function changeAffirmation() {
+  var randomAffirmation = Math.floor(Math.random() * affirmations.length);
+  var receivedAffirmation = affirmations[randomAffirmation];
+  return receivedAffirmation;
+};
+
+function changeMantra() {
+  var randomMantra = Math.floor(Math.random() * mantras.length);
+  var receivedMantra = mantras[randomMantra];
+  return receivedMantra;
+};
