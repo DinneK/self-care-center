@@ -1,10 +1,12 @@
  var affirmationButton = document.querySelector('.affirmation');
- console.log(affirmationButton)
- var mantraButton = document.querySelector('.mantra')
+ var mantraButton = document.querySelector('.mantra');
  var messageButton = document.querySelector('#receive-message-button');
- var soundBox = document.querySelector('.sound-box')
+ var soundBox = document.querySelector('.sound-box');
+ var clearButton = document.querySelector('#clear-message-button');
+ var meditatingHuman = document.querySelector('.meditating-human');
 
 messageButton.addEventListener('click', clickOnMessageButton);
+clearButton.addEventListener('click', clickOnClearButton);
 
 
 var affirmations = [
@@ -43,12 +45,13 @@ var mantras = [
 
 function clickOnMessageButton(event) {
   event.preventDefault();
+  clearButton.classList.remove('hidden');
   if(affirmationButton.checked) {
     soundBox.innerText = `${changeAffirmation()}`;
   } else if(mantraButton.checked) {
     soundBox.innerText = `${changeMantra()}`;
   } else {
-    alert('Please Pick an Affirmation or Mantra');
+    soundBox.innerText = `Please Pick an Affirmation or Mantra`;
   }
 };
 
@@ -62,4 +65,9 @@ function changeMantra() {
   var randomMantra = Math.floor(Math.random() * mantras.length);
   var receivedMantra = mantras[randomMantra];
   return receivedMantra;
+};
+
+function clickOnClearButton() {
+  soundBox.innerHTML = '<img class="meditating-human" src="assets/meditate.svg" alt="Meditating Human"/>'
+  clearButton.classList.add('hidden');
 };
