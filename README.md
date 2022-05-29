@@ -18,8 +18,12 @@
 - Finished comp card
 - Radio buttons, representing 'Affirmations' and 'Mantras'.
 - Message button causing the Meditating Human icon to disappear.
+- Responds to the viewers screen size.
+- Buttons change color and size when mouse hovers.
+
 
 **The Choose Your Own Adventure 1**
+*Error handling and clear button*
 - User should not be able to click the “Receive Message” button unless they have selected a message option.
 - The user can click a clear button, which clears the page of any message.
 - User should only be able to click the clear button if a message is visible.
@@ -35,16 +39,13 @@
 - When the message appears, the text should fade in, from white to black to deliver the message in a calming way.
 - Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for - each type of message.
 
-## Deployed Page
-Visit our published Hang In There Site! [here](https://jdeloach03.github.io/whats-for-dinner/)
-
 ## Possible Future Extensions
   - A login page would be super cool, if it were responsive in a sense of allowing users login to be saved/recipe ideas they like to be stored within their page.
   - Adding in transitions via CSS would have appreciated.
 
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
-  - [JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
+  - HTML & CSS, by Jon Duckett
   - [YouTube](https://www.youtube.com/)
   - [W3Schools](https://www.w3schools.com/)
 
