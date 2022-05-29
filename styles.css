@@ -96,3 +96,14 @@ input {
   height: 30px;
   width: 125px;
 }
+@media only screen and (max-width: 800px) {
+  body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    padding-top: 300px;
+  }
+}
